@@ -17,18 +17,63 @@
         <script src="assets/vendors/js-emoji/v3.4.1/lib/emoji.min.js"></script>
         <style type="text/css">
             header {
-                position: fixed;
+                padding: 3.6rem 3.5rem 3.6rem 3.5rem !important;
+                /*position: fixed;
                 top: 0;
                 right: 0;
                 bottom: 0;
-                left: 0;
+                left: 0;*/
+            }
+            header h1 {
+                font-size: 1.95rem !important;
             }
         </style>
     </head>
     <body>
         <header class="page-header" role="banner">
-            <h1 class="project-name">Matlock Installed!</h1>
-            <h2 class="project-tagline">Matlock has been installed. Sorry this "installed" page is anti-climatic.</h2>
+            <h1 class="project-name">🎉 Matlock Installed!</h1>
         </header>
+
+        <main id="content" class="main-content" role="main">
+            <h2 id="what">👍 Congrats!</h2>
+            <p>
+                While this isn't the most exciting success page, Matlock has
+                been successfully installed.
+            </p>
+            <h2 id="screenshots">🤷‍♂️ Now what?</h2>
+            <p>
+                A Matlock icon has been added to your Browser Toolbar. Give
+                Matlock a try now by clicking that icon, and discovering the
+                Open Source libraries that this page is using.
+            </p>
+
+            <hr>
+
+            <h2 id="acknowledgments">🙏 Acknowledgments</h2>
+            <ul>
+                <li><a href="https://github.com/AliasIO/Wappalyzer" target="_blank">AliasIO/Wappalyzer</a>
+                <li><a href="https://github.com/blueimp/JavaScript-MD5" target="_blank">blueimp/JavaScript-MD5</a>
+                <li><a href="https://github.com/es/Octocat" target="_blank">es/Octocat</a>
+                <li><a href="https://github.com/FortAwesome/Font-Awesome" target="_blank">FortAwesome/Font-Awesome</a>
+                <li><a href="https://github.com/getstencil/WebExtension-ContentScriptsLoader" target="_blank">getstencil/WebExtension-ContentScriptsLoader</a>
+                <li><a href="https://github.com/iamcal/js-emoji" target="_blank">iamcal/js-emoji</a>
+                <li><a href="https://github.com/jashkenas/underscore" target="_blank">jashkenas/underscore</a>
+                <li><a href="https://github.com/jquery/jquery" target="_blank">jquery/jquery</a>
+                <li><a href="https://github.com/lipis/flag-icon-css" target="_blank">lipis/flag-icon-css</a>
+                <li><a href="https://github.com/moment/moment" target="_blank">moment/moment</a>
+                <li><a href="https://github.com/necolas/normalize.css" target="_blank">necolas/normalize.css/</a>
+                <li><a href="https://octodex.github.com/" target="_blank">Octodex</a>
+                <li><a href="https://github.com/pages-themes/cayman" target="_blank">pages-themes/cayman</a>
+                <li><a href="https://github.com/SoapBox/linkifyjs" target="_blank">SoapBox/linkifyjs</a>
+                <li><a href="https://github.com/typekit/webfontloader" target="_blank">typekit/webfontloader</a>
+            </ul>
+
+            <footer class="site-footer">
+                &copy; Matlock 2018
+            </footer>
+            <script type="text/javascript">
+                new SimpleLightbox({elements: 'a.screenshot'});
+            </script>
+        </main>
     </body>
 </html>
