@@ -1,0 +1,26 @@
+# Permissions
+
+## `webRequest`
+Needed to be able to check the headers of the pages you visit, which helps us
+determine certain open source libraries like what server websites may be
+running, frameworks, or programming languages.
+
+This one is important because there are ways where we can artifically determine
+this by re-requesting the page you're on, and checking those headers.
+
+However doing this is risky, and while some other extensions use this approach,
+this can cause serious security issues (eg. re-submitting requests on poorly
+designed financial websites).
+
+## `cookies`
+Used in determining things like:  
+- Programming frameworks
+
+## `tabs`
+Used to load Matlock up in all your tabs once it's installed.
+
+## `storage`
+Used to speed up Matlock so that we don't need to re-investigate webpages
+that may have been investigated earlier.
+
+## `<all_urls>`
