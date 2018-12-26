@@ -12,6 +12,7 @@
         <meta property="og:site_name" content="Matlock">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <link rel="stylesheet" href="assets/style.css">
         <style type="text/css">
             @font-face {
@@ -79,15 +80,15 @@
         <header class="page-header" role="banner">
             <h1 class="project-name">Matlock</h1>
             <h2 class="project-tagline">Matlock is a Browser Extension that detects which Open Source libraries webpages are using.</h2>
-            <a href="https://google.com/" class="btn">Install for Chrome</a>
-            <a href="https://google.com/" class="btn">Install for Firefox</a>
+            <a href="https://google.com/" class="btn"><i class="fa fa-google"></i> Install for Chrome</a>
+            <a href="https://google.com/" class="btn"><i class="fa fa-firefox"></i> Install for Firefox</a>
         </header>
 
         <main id="content" class="main-content" role="main">
             <h2 id="header-2">What is Matlock?</h2>
             <p>
-                Matlock is our first attempt and building an extension (for
-                Chrome and Firefox) which detects, and lists out, which Open
+                Matlock is our first attempt at building an extension (currently
+                for Chrome and Firefox) which detects, and lists out, which Open
                 Source libraries a webpage is using.
             </p>
             <p>
@@ -103,30 +104,92 @@
                 The results of these tests tell Matlock whether a certain
                 library is being used, and in some cases, which version.
             </p>
+            <h2 id="header-2">Why does Matlock require so many permissions?</h2>
             <p>
-                Check out our <a href="/faq">FAQ</a> for more information.
+                Here's a breakdown of each of the permissions Matlock needs, and
+                the reason why:
             </p>
+            <dl>
+                <dt><code>webRequest</code></dt>
+                <dd>
+                    <p>
+                        This permission allows Matlock to access the headers for
+                        webpages you visit.
+                    </p>
+                    <p>
+                        It's useful for determining Open Source libraries which include
+                        programming languages, frameworks, or servers that a webpage may
+                        be running on.
+                    </p>
+                    <p>
+                        This one is important because there are ways where we can
+                        artifically determine this by re-requesting the page you're on,
+                        and checking those headers. However doing this is risky, and
+                        while some other extensions use this approach, this can cause
+                        serious security issues (eg. re-submitting requests on poorly
+                        designed financial websites).
+                    </p>
+                </dd>
+                <dt><code>cookies</code></dt>
+                <dd>
+                    <p>
+                        This permission allows Matlock to access the cookies that are
+                        saved for the webpages you visit.
+                    </p>
+                    <p>
+                        It's particularly useful for frameworks that a webpage may be
+                        running on.
+                    </p>
+                </dd>
+                <dt><code>tabs</code></dt>
+                <dd>
+                    <p>
+                        This permission is required to load Matlock in each of your open
+                        tabs upon installation, without requiring you to reload each
+                        tab.
+                    </p>
+                </dd>
+                <dt><code>storage</code></dt>
+                <dd>
+                    <p>
+                        The <code>storage</code> permission is required to cache the
+                        response of certain requests.
+                    </p>
+                </dd>
+                <dt><code>&lt;all_urls&gt;</code></dt>
+                <dd>
+                    <p>
+                        This permission allows Matlock to run on each of the pages you
+                        browse.
+                    </p>
+                    <p>
+                        It's the core permission required to test the Matlock
+                        breadcrumbs.
+                    </p>
+                </dd>
+            </dl>
+
 
             <hr>
 
 
             <h2 id="header-2">Acknowledgments</h2>
             <ul>
-                <li><a href="https://github.com/pages-themes/cayman">pages-themes/cayman</a>
-                <li><a href="https://github.com/AliasIO/Wappalyzer">AliasIO/Wappalyzer</a>
-                <li><a href="https://github.com/lipis/flag-icon-css">lipis/flag-icon-css</a>
-                <li><a href="https://github.com/FortAwesome/Font-Awesome">FortAwesome/Font-Awesome</a>
-                <li><a href="https://github.com/blueimp/JavaScript-MD5">blueimp/JavaScript-MD5</a>
-                <li><a href="https://github.com/jquery/jquery">jquery/jquery</a>
-                <li><a href="https://github.com/iamcal/js-emoji">iamcal/js-emoji</a>
-                <li><a href="https://github.com/SoapBox/linkifyjs">SoapBox/linkifyjs</a>
-                <li><a href="https://github.com/moment/moment">moment/moment</a>
-                <li><a href="https://github.com/necolas/normalize.css">necolas/normalize.css/</a>
-                <li><a href="https://github.com/es/Octocat">es/Octocat</a>
-                <li><a href="https://github.com/jashkenas/underscore">jashkenas/underscore</a>
-                <li><a href="https://github.com/getstencil/WebExtension-ContentScriptsLoader">getstencil/WebExtension-ContentScriptsLoader</a>
-                <li><a href="https://github.com/typekit/webfontloader">typekit/webfontloader</a>
-                <li><a href="https://octodex.github.com/">Octodex</a>
+                <li><a href="https://github.com/pages-themes/cayman" target="_blank">pages-themes/cayman</a>
+                <li><a href="https://github.com/AliasIO/Wappalyzer" target="_blank">AliasIO/Wappalyzer</a>
+                <li><a href="https://github.com/lipis/flag-icon-css" target="_blank">lipis/flag-icon-css</a>
+                <li><a href="https://github.com/FortAwesome/Font-Awesome" target="_blank">FortAwesome/Font-Awesome</a>
+                <li><a href="https://github.com/blueimp/JavaScript-MD5" target="_blank">blueimp/JavaScript-MD5</a>
+                <li><a href="https://github.com/jquery/jquery" target="_blank">jquery/jquery</a>
+                <li><a href="https://github.com/iamcal/js-emoji" target="_blank">iamcal/js-emoji</a>
+                <li><a href="https://github.com/SoapBox/linkifyjs" target="_blank">SoapBox/linkifyjs</a>
+                <li><a href="https://github.com/moment/moment" target="_blank">moment/moment</a>
+                <li><a href="https://github.com/necolas/normalize.css" target="_blank">necolas/normalize.css/</a>
+                <li><a href="https://github.com/es/Octocat" target="_blank">es/Octocat</a>
+                <li><a href="https://github.com/jashkenas/underscore" target="_blank">jashkenas/underscore</a>
+                <li><a href="https://github.com/getstencil/WebExtension-ContentScriptsLoader" target="_blank">getstencil/WebExtension-ContentScriptsLoader</a>
+                <li><a href="https://github.com/typekit/webfontloader" target="_blank">typekit/webfontloader</a>
+                <li><a href="https://octodex.github.com/" target="_blank">Octodex</a>
             </ul>
 
             <footer class="site-footer">
