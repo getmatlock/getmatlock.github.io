@@ -13,7 +13,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-        <link rel="stylesheet" href="assets/style.css">
+        <script src="assets/vendors/js-emoji/v3.4.1/lib/emoji.min.js"></script>
+        <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body>
         <header class="page-header" role="banner">
@@ -35,12 +36,12 @@
             </p>
             <h2 id="how">How does it work?</h2>
             <p>
-                Matlock works by running a series of tests on each page you
+                Matlock works by running a series of tests 📏 on each page you
                 navigate to, checking for specific variables, strings, headers
-                or cookies.
+                or cookies 🍪.
             </p>
             <p>
-                The results of these tests tell Matlock whether a certain
+                The results of these tests 📏 tell Matlock whether a certain
                 library is being used, and in some cases, which version.
             </p>
             <h2 id="permissions">Why does Matlock require so many permissions?</h2>
@@ -69,11 +70,11 @@
                         designed financial websites).
                     </p>
                 </dd>
-                <dt><code>cookies</code></dt>
+                <dt><code>cookies 🍪</code></dt>
                 <dd>
                     <p>
-                        This permission allows Matlock to access the cookies that are
-                        saved for the webpages you visit.
+                        This permission allows Matlock to access the cookies 🍪
+                        that are saved for the webpages you visit.
                     </p>
                     <p>
                         It's particularly useful for frameworks that a webpage may be
@@ -103,21 +104,23 @@
                     </p>
                     <p>
                         It's the core permission required to test the Matlock
-                        breadcrumbs.
+                        breadcrumbs 🍞.
                     </p>
                 </dd>
             </dl>
 
             <hr>
 
-            <h2 id="breadcrumbs">What's a breadcrumb?</h2>
+            <h2 id="breadcrumbs">What's a breadcrumb 🍞?</h2>
             <p>
-                Breadcrumbs are JavaScript files that outline how we determine
-                whether an Open Source library is being used.
+                Breadcrumbs are JavaScript files that Matlock use to determine
+                whether an Open Source library is being used, and if so, which
+                version is being used.
             </p>
+            <h3>Existential testing</h3>
             <p>
-                They contain a set of tests for a library, which include testing
-                the follow possible scenarios:
+                The following scenarios are used for determining whether an
+                Open Source library is being used on a page:
             </p>
             <ul>
                 <li>
@@ -133,10 +136,10 @@
                     Checking a page's <strong><em>markup</em></strong> for specific patterns
                 </li>
                 <li>
-                    Checking a request's <strong><em>cookies</em></strong> for specific strings
+                    Checking a request's <strong><em>cookies 🍪</em></strong> for specific strings
                 </li>
                 <li>
-                    Checking a request's <strong><em>cookies</em></strong> for specific patterns
+                    Checking a request's <strong><em>cookies 🍪</em></strong> for specific patterns
                 </li>
                 <li>
                     Checking a request's <strong><em>headers</em></strong> for specific strings
@@ -160,9 +163,44 @@
                     Checking a request's <strong><em>scripts</em></strong> for specific patterns
                 </li>
             </ul>
+            <h3>
+                Version testing
+            </h3>
             <p>
-                The results of these tests help determine whether an Open Source
-                library is being used.
+                The following scenarios are used for determining the (possible)
+                version of an Open Source library that is being used on a page:
+            </p>
+            <ul>
+                <li>
+                    Searching for JavaScript references
+                </li>
+                <li>
+                    Evaluating JavaScript statements
+                </li>
+                <li>
+                    Checking a page's <strong><em>markup</em></strong> for specific patterns
+                </li>
+                <li>
+                    Checking a request's <strong><em>cookies 🍪</em></strong> for specific patterns
+                </li>
+                <li>
+                    Checking a request's <strong><em>headers</em></strong> for specific patterns
+                </li>
+            </ul>
+            <h4>Coming soon</h4>
+            <ul>
+                <li>
+                    Checking a request's <strong><em>stylesheets</em></strong> for specific patterns
+                </li>
+                <li>
+                    Checking a request's <strong><em>scripts</em></strong> for specific patterns
+                </li>
+            </ul>
+
+            <h2 id="who">Who's behind it?</h2>
+            <p>
+                Matlock was built by Oliver Nassar and Adam Masson. We're based
+                in Toronto 🇨🇦, and we both like coffee ☕.
             </p>
 
             <h2 id="acknowledgments">Acknowledgments</h2>
