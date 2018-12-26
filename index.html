@@ -24,7 +24,7 @@
         </header>
 
         <main id="content" class="main-content" role="main">
-            <h2 id="header-2">What is Matlock?</h2>
+            <h2 id="what">What is Matlock?</h2>
             <p>
                 Matlock is our first attempt at building an extension (currently
                 for Chrome and Firefox) which detects, and lists out, which Open
@@ -33,7 +33,7 @@
             <p>
                 At the moment, this is limited to GitHub-hosted libraries.
             </p>
-            <h2 id="header-2">How does it work?</h2>
+            <h2 id="how">How does it work?</h2>
             <p>
                 Matlock works by running a series of tests on each page you
                 navigate to, checking for specific variables, strings, headers
@@ -43,7 +43,7 @@
                 The results of these tests tell Matlock whether a certain
                 library is being used, and in some cases, which version.
             </p>
-            <h2 id="header-2">Why does Matlock require so many permissions?</h2>
+            <h2 id="permissions">Why does Matlock require so many permissions?</h2>
             <p>
                 Here's a breakdown of each of the permissions Matlock needs, and
                 the reason why:
@@ -108,11 +108,64 @@
                 </dd>
             </dl>
 
-
             <hr>
 
+            <h2 id="breadcrumbs">What's a breadcrumb?</h2>
+            <p>
+                Breadcrumbs are JavaScript files that outline how we determine
+                whether an Open Source library is being used.
+            </p>
+            <p>
+                They contain a set of tests for a library, which include testing
+                the follow possible scenarios:
+            </p>
+            <ul>
+                <li>
+                    Searching for JavaScript references
+                </li>
+                <li>
+                    Evaluating JavaScript statements
+                </li>
+                <li>
+                    Checking a page's <strong><em>markup</em></strong> for specific strings
+                </li>
+                <li>
+                    Checking a page's <strong><em>markup</em></strong> for specific patterns
+                </li>
+                <li>
+                    Checking a request's <strong><em>cookies</em></strong> for specific strings
+                </li>
+                <li>
+                    Checking a request's <strong><em>cookies</em></strong> for specific patterns
+                </li>
+                <li>
+                    Checking a request's <strong><em>headers</em></strong> for specific strings
+                </li>
+                <li>
+                    Checking a request's <strong><em>headers</em></strong> for specific patterns
+                </li>
+            </ul>
+            <h4>Coming soon</h4>
+            <ul>
+                <li>
+                    Checking a request's <strong><em>stylesheets</em></strong> for specific strings
+                </li>
+                <li>
+                    Checking a request's <strong><em>stylesheets</em></strong> for specific patterns
+                </li>
+                <li>
+                    Checking a request's <strong><em>scripts</em></strong> for specific strings
+                </li>
+                <li>
+                    Checking a request's <strong><em>scripts</em></strong> for specific patterns
+                </li>
+            </ul>
+            <p>
+                The results of these tests help determine whether an Open Source
+                library is being used.
+            </p>
 
-            <h2 id="header-2">Acknowledgments</h2>
+            <h2 id="acknowledgments">Acknowledgments</h2>
             <ul>
                 <li><a href="https://github.com/pages-themes/cayman" target="_blank">pages-themes/cayman</a>
                 <li><a href="https://github.com/AliasIO/Wappalyzer" target="_blank">AliasIO/Wappalyzer</a>
